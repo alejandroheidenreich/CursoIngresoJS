@@ -4,6 +4,11 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 */
 function mostrar()
 {
-	alert("ok");
+	let nombre;
+
+	nombre = prompt("ingrese su nombre");
+
+	document.getElementById("txtIdNombre").value = nombre; // entrada de promt - valor de la caja de texto embebida 
+
 }
 
