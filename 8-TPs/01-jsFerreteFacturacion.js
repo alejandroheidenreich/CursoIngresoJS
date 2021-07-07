@@ -22,7 +22,7 @@ function Promedio() {
     let num1;
     let num2;
     let num3;
-    let promedio
+    let promedio;
 
     num1 = parseInt(document.getElementById("txtIdPrecioUno").value);
     num2 = parseInt(document.getElementById("txtIdPrecioDos").value);
