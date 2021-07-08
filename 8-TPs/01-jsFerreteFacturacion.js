@@ -14,10 +14,11 @@ function Sumar() {
     num3 = parseInt(document.getElementById("txtIdPrecioTres").value);
 
     suma = num1 + num2 + num3;
-    
+
     alert("La suma de los precios es " + suma);
 
 }
+
 function Promedio() {
     let num1;
     let num2;
@@ -28,12 +29,13 @@ function Promedio() {
     num2 = parseInt(document.getElementById("txtIdPrecioDos").value);
     num3 = parseInt(document.getElementById("txtIdPrecioTres").value);
 
-    //promedio = Sumar() / 3;
+    //promedio = Sumar() / 3; Preguntar
     promedio = (num1 + num2 + num3) / 3;
 
     alert("El promedio de los precios es " + promedio);
 
 }
+
 function PrecioFinal() {
     let num1;
     let num2;

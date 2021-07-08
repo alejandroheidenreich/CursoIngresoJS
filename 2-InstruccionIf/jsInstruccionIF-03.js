@@ -8,7 +8,8 @@ function mostrar()
 	{
 		alert("Es mayor de edad");
 	}
-	else{
+	else
+	{
 		alert("Es menor de edad");
 	}
 	
