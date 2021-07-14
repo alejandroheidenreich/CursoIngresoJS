@@ -18,7 +18,6 @@ function mostrar() {
             break;
         default:
             alert("Ya pasamos el frio, ahora calor!!!");
-            break;
     }
 
 }
