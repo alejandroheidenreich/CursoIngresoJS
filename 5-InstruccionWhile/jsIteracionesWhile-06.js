@@ -1,13 +1,30 @@
+// function mostrar()
+// {
+// let num;
+
+// num = parseInt(prompt("ingrese numero"));
+// num += parseInt(prompt("ingrese numero"));
+// num += parseInt(prompt("ingrese numero"));
+// num += parseInt(prompt("ingrese numero"));
+// num += parseInt(prompt("ingrese numero"));
+
+// document.getElementById("txtIdSuma").value = num;
+// document.getElementById("txtIdPromedio").value = num/5;
+
+// }
+
+
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var numeroIngresado;
+let num=0;
+let i=0;
 
-	contador=0;
-	acumulador=0;
-	
-	
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/5;
-}//FIN DE LA FUNCIÓN
+while(i<5){
+	num += parseInt(prompt("ingrese numero"));
+	i++;
+}
+
+document.getElementById("txtIdSuma").value = num;
+document.getElementById("txtIdPromedio").value = num/5;
+
+}
