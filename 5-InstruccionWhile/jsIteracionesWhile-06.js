@@ -16,7 +16,7 @@
 
 function mostrar()
 {
-let num=0;
+let num;
 let i=0;
 
 while(i<5){
