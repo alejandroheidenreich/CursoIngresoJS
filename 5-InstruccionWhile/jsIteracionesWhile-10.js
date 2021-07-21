@@ -10,20 +10,51 @@ hasta que el usuario quiera, mostrar:
 7-Promedio de positivos.
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
-function mostrar()
-{
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+function mostrar() {
+	let num,
+		sumaPositivos = 0,
+		sumaNegativos = 0,
+		cantPositivos = 0,
+		cantNegativos = 0,
+		cantPar = 0,
+		cantInpar = 0,
+		cantCero = 0,
+		promedioPositivos,
+		promedioNegativos,
+		r;
 
-	respuesta="si";
+	do {
+		num = parseInt(prompt("Ingrese un numero."));
+		while (isNaN(num)) {
+			num = parseInt(prompt("Dato incorrecto: Ingrese un numero."));
+		}
+		if (num > 0) {
+			sumaPositivos += num;
+			cantPositivos++;
+		} else if (num < 0) {
+			sumaNegativos += num;
+			cantNegativos++;
+		} else {
+			cantCero++;
+		}
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		if (num % 2 == 0) {
+			cantPar++;
+		} else {
+			cantInpar++;
+		}
 
-	document.write("la suma de negativos es :"+sumaNegativos);
-}//FIN DE LA FUNCIÓN
+		r = prompt("Quiere ingresar otro numero? si/no").toLowerCase();
+		while (r != "si" && r != "no") {
+			r = prompt("Respuesta No Válida: Quiere ingresar otro numero? si/no").toLowerCase();
+		}
+
+	} while (r == "si");
+
+	promedioPositivos = sumaPositivos / cantPositivos;
+	promedioNegativos = sumaNegativos / cantNegativos;
+
+	alert(`Suma de Positivos: ${sumaPositivos} \n Suma de Negativos: ${sumaNegativos} \n Cantidad de Positivos: ${cantPositivos} \n Cantidad de Negativos: ${cantNegativos} \n Cantidad de Ceros: ${cantCero} \n Cantidad de Numeros Pares: ${cantPar} \n Cantidad de Numeros Inpares: ${cantInpar} \n Promedio de Positivos: ${promedioPositivos} \n Promedio de Negativos: ${promedioNegativos}`);
+
+
+}
