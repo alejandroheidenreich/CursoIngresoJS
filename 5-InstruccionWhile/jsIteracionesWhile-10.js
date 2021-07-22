@@ -17,11 +17,11 @@ function mostrar() {
 		cantPositivos = 0,
 		cantNegativos = 0,
 		cantPar = 0,
-		cantInpar = 0,
 		cantCero = 0,
 		promedioPositivos,
 		promedioNegativos,
-		r;
+		diferencia;
+	respt;
 
 	do {
 		num = parseInt(prompt("Ingrese un numero."));
@@ -40,21 +40,31 @@ function mostrar() {
 
 		if (num % 2 == 0) {
 			cantPar++;
-		} else {
-			cantInpar++;
 		}
 
-		r = prompt("Quiere ingresar otro numero? si/no").toLowerCase();
-		while (r != "si" && r != "no") {
-			r = prompt("Respuesta No Válida: Quiere ingresar otro numero? si/no").toLowerCase();
+		respt = prompt("Quiere ingresar otro numero? si/no").toLowerCase();
+		while (respt != "si" && respt != "no") {
+			respt = prompt("Respuesta No Válida: Quiere ingresar otro numero? si/no").toLowerCase();
 		}
 
-	} while (r == "si");
+	} while (respt == "si");
 
-	promedioPositivos = sumaPositivos / cantPositivos;
-	promedioNegativos = sumaNegativos / cantNegativos;
+	if (cantPositivos = 0) {
+		promedioPositivos = 0;
+	} else {
+		promedioPositivos = sumaPositivos / cantPositivos;
+	}
+	if (cantNegativos = 0) {
+		promedioNegativos = 0;
+	} else {
+		promedioNegativos = sumaNegativos / cantNegativos;
+	}
 
-	alert(`Suma de Positivos: ${sumaPositivos} \n Suma de Negativos: ${sumaNegativos} \n Cantidad de Positivos: ${cantPositivos} \n Cantidad de Negativos: ${cantNegativos} \n Cantidad de Ceros: ${cantCero} \n Cantidad de Numeros Pares: ${cantPar} \n Cantidad de Numeros Inpares: ${cantInpar} \n Promedio de Positivos: ${promedioPositivos} \n Promedio de Negativos: ${promedioNegativos}`);
+	diferencia = cantPositivos - cantNegativos;
+	if (diferencia < 0) {
+		diferencia *= -1;
+	}
 
+	alert(`Suma de Positivos: ${sumaPositivos} \n Suma de Negativos: ${sumaNegativos} \n Cantidad de Positivos: ${cantPositivos} \n Cantidad de Negativos: ${cantNegativos} \n Cantidad de Ceros: ${cantCero} \n Cantidad de Numeros Pares: ${cantPar} \n Promedio de Positivos: ${promedioPositivos} \n Promedio de Negativos: ${promedioNegativos} \n Diferencia entre Positivos y Negativos: ${diferencia}`);
 
 }
