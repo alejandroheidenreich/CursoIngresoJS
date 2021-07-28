@@ -18,8 +18,8 @@ function mostrar() {
 		cantNegativos = 0,
 		cantPar = 0,
 		cantCero = 0,
-		promedioPositivos,
-		promedioNegativos,
+		promedioPositivos = 0,
+		promedioNegativos = 0,
 		diferencia;
 	respt;
 
@@ -49,14 +49,10 @@ function mostrar() {
 
 	} while (respt == "si");
 
-	if (cantPositivos = 0) {
-		promedioPositivos = 0;
-	} else {
+	if (cantPositivos != 0) {
 		promedioPositivos = sumaPositivos / cantPositivos;
 	}
-	if (cantNegativos = 0) {
-		promedioNegativos = 0;
-	} else {
+	if (cantNegativos != 0) {
 		promedioNegativos = sumaNegativos / cantNegativos;
 	}
 

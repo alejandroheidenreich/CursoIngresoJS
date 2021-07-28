@@ -1,8 +1,14 @@
-function mostrar()
-{
+function mostrar() {
+	let cant;
 
-	var repetciones = prompt("ingrese el número de repeticiones");
-	alert("ok");
+	cant = parseInt(prompt("Ingresar la cantidad de veces que quiere repetir el mensaje."));
 
+	while (isNaN(cant) || cant <= 0) {
+		cant = parseInt(prompt("ERROR: Ingresar una cantidad valida!"));
+	}
 
-}//FIN DE LA FUNCIÓN
+	for (cant; cant > 0; cant--) {
+		alert("Hola UTN FRA");
+	}
+
+}
