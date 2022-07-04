@@ -46,7 +46,7 @@ function verificarPalindromo ()
 		palabraInvertida=palabraSinEspacios[i]+palabraInvertida;
 	}
 
-	palabraIngresada=palabraInvertida;
+	txtIdPalabra.value=palabraInvertida;
 	if(palabraInvertida==palabraSinEspacios)
 	{
 		alert("es palindromo");
